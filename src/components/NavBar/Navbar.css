@@ -1,0 +1,229 @@
+nav {
+    position: fixed;
+    top: 2rem;
+    left: 17%;           
+    right: 17%;           
+    width: auto;          
+    
+
+    background: rgba(34, 34, 34, 0.3); 
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    
+    border-radius: 40px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    
+    color: var(--color-text-primary, #ffffff);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-left .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-left h1 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.nav-right ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.nav-right li,
+.nav-right li a{
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.nav-right li a{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-right li:hover,
+.nav-right li a:hover {
+    opacity: 1;
+    color: #ffffff;
+}
+
+nav .bar-icon{
+  display: none;
+}
+
+
+  nav .login-button,
+  .sidebar .login-button{
+    background: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    padding: 6px 16px;
+    border-radius: 6px;
+    border: none;
+    transition: background 0.3s ease;
+  }
+  
+  nav .login-button a,
+  .sidebar .login-button a {
+    color: white;
+    font-weight: 500;
+  }
+  
+  nav .login-button:hover,
+  .sidebar .login-button:hover {
+    background: var(--color-primary-dark);
+    cursor: pointer;
+  }
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 999; 
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.sidebar-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -280px; 
+  width: 280px;
+  height: 100vh;
+  
+  background: rgba(34, 34, 34, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: -4px 0 30px rgba(0, 0, 0, 0.5);
+
+  color: var(--color-text-primary, #ffffff);
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar .close-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease, transform 0.3s ease;
+  
+  position: absolute;
+  top: 3rem; 
+  right: 2rem; 
+  
+  margin-bottom: 0; 
+}
+
+.sidebar .close-btn:hover {
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  
+  margin-top: 6rem; 
+}
+
+.sidebar ul li {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar ul li:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .login-button {
+  margin-top: auto; 
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    left: 5%;
+    right: 5%;
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    top: 10;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  
+  nav .nav-right {
+    display: none;
+  }
+  
+  nav .bar-icon {
+    display: block;
+  }
+}

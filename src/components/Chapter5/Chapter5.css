@@ -1,0 +1,163 @@
+.chapter5-contanier{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+.chapter5-contanier .space{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+}
+.chapter5-contanier .space .left-side{
+    flex: 1;
+    flex-basis: 45%;
+}
+.chapter5-contanier .space .left-side img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.6;
+}
+.chapter5-contanier .space .right-side{
+    flex: 1;
+    flex-basis: 60%;
+}
+
+.chapter5-contanier .space .right-side {
+    padding-left: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chapter5-contanier .space .right-side h2 {
+    font-size: var(--font-size-h2);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.chapter5-contanier .space .right-side h2:first-child {
+    margin-top: 0;
+}
+
+.chapter5-contanier .space .right-side p {
+    font-size: var(--font-size-body);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-body);
+    /* margin-bottom: var(--space-md); */
+}
+
+.chapter5-contanier .space .right-side ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: var(--space-md);
+}
+
+.chapter5-contanier .space .right-side ul li {
+    font-size: var(--font-size-body);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-body);
+    margin-bottom: var(--space-sm);
+    padding-left: var(--space-md);
+    border-left: 2px solid var(--color-bg-tertiary);
+}
+
+.chapter5-contanier .buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+
+}
+.chapter5-contanier .buttons button{
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--color-text-primary);
+    background-color:rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+.chapter5-contanier .buttons button:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 960px) {
+    .chapter5-contanier {
+        padding: 4rem 1rem;
+    }
+
+    .chapter5-contanier .space {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .chapter5-contanier .space .left-side,
+    .chapter5-contanier .space .right-side {
+        flex-basis: 100%;
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .chapter5-contanier .space .right-side {
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .chapter5-contanier .space .left-side img {
+        width: 60%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .chapter5-contanier .space .right-side ul {
+        text-align: left;
+        display: inline-block;
+    }
+    
+    .chapter5-contanier .buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .chapter5-contanier .h1 {
+        font-size: 2rem;
+    }
+
+    .chapter5-contanier .p {
+        font-size: 0.9rem;
+    }
+
+    .chapter5-contanier .space .left-side img {
+        width: 80%;
+    }
+
+    .chapter5-contanier .space .right-side h2 {
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+    
+    .chapter5-contanier .buttons {
+        gap: 0.5rem;
+    }
+    
+    .chapter5-contanier .buttons button {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
