@@ -28,7 +28,7 @@ const tools = [
   },
   {
     "name": "Django REST Framework",
-    "image": "src/assets/drf.png"
+    "image": "/assets/drf.png"
   },
   {
     "name": "FastAPI",
@@ -48,7 +48,7 @@ const tools = [
   },
   {
     "name": "LangGraph",
-    "image": "src/assets/langgraph-color.svg"
+    "image": "/assets/langgraph-color.svg"
   },
   {
     "name": "Git & GitHub",
