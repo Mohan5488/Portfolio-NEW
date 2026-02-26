@@ -6,21 +6,21 @@ const projects = [
   {
     title :"Classroom Hub",
     description :"A collaborative platform for classroom discussions, events, and knowledge sharing.",
-    image: "src/assets/p5.png",
+    image: "/assets/p5.png",
     tags: ["React","Django rest Framework", "Sqlite"],
     link: "/view-case-study/1"
   },
   {
     title: "Multi-channel Agent",
     description: "A LangGraph-based AI agent that sends emails, posts to LinkedIn, chats, and performs web searches—all from a single prompt",
-    image: "src/assets/p16.png",
+    image: "/assets/p16.png",
     tags: ["Python", "LangGraph", "LangChain", "Google API's"],
     link: "/view-case-study/2"
   },
   {
     title : "Textbook Assistant",
     description: "AI-powered educational platform that turns static PDFs into interactive study rooms with RAG and LangGraph.",
-    image:"src/assets/p11.png",
+    image:"/assets/p11.png",
     tags : ["Python", "Django", "LangGraph", "RAG", "Redis", "Celery", "FAISS", "LLM"],
     link: "/view-case-study/4"
   }
