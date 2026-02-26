@@ -10,7 +10,7 @@ const Chapter5 = () => {
 
       <div className="space">
         <div className="left-side">
-          <img src="src/assets/profile.jpg" alt="" />
+          <img src="/assets/profile.jpg" alt="" />
         </div>
         <div className="right-side">
           <h2>Current Focus</h2>
