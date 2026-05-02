@@ -4,3 +4,65 @@
   width: 100%;
   position: relative;
 }
+
+@media (max-width: 768px) {
+    .project-card-content .upper-part {
+        height: 200px;
+    }
+
+    .project-card-content .lower-part {
+        padding: 1.5rem;
+    }
+
+    .project-card-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-card-content p {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+
+    .project-card-content .tags-container {
+        margin-bottom: 1rem;
+        gap: 6px;
+    }
+
+    .project-card-content .tags-container span {
+        font-size: 0.85rem;
+        padding: 4px 8px;
+    }
+
+    .project-card-content button {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card-content .upper-part {
+        height: 160px;
+    }
+
+    .project-card-content .lower-part {
+        padding: 1.2rem;
+    }
+
+    .project-card-content h2 {
+        font-size: 1.1rem;
+    }
+    
+    .project-card-content p {
+        font-size: 0.8rem;
+    }
+
+    .project-card-content .tags-container span {
+        font-size: 0.75rem;
+        padding: 4px 6px;
+    }
+    
+    .project-card-content button {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}

@@ -124,7 +124,8 @@ export default function DomeGallery({
   openedImageHeight = '350px',
   imageBorderRadius = '30px',
   openedImageBorderRadius = '30px',
-  grayscale = true
+  grayscale = true,
+  onNavigate
 }) {
   const rootRef = useRef(null);
   const mainRef = useRef(null);
@@ -550,6 +551,13 @@ export default function DomeGallery({
             anchor.style.textDecoration = "none";
             anchor.style.display = "block";
             anchor.style.marginTop = "auto";
+            
+            if (onNavigate) {
+                anchor.onclick = (e) => {
+                    e.preventDefault();
+                    onNavigate(linkStr);
+                };
+            }
             
             const button = document.createElement('button');
             button.textContent = 'View Case Study';

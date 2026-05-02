@@ -194,6 +194,13 @@ nav .bar-icon{
   border-bottom-color: rgba(255, 255, 255, 0.2);
 }
 
+.sidebar ul li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
 .sidebar .login-button {
   margin-top: auto; 
   width: 100%;

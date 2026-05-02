@@ -36,27 +36,22 @@ const Navbar = () => {
           whileInView={{opacity:1, y : 0}}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          onClick={() => setBar(false)}>Journey</motion.li>
+          onClick={() => setBar(false)}><a href="/">Journey</a></motion.li>
           <motion.li
           initial = {{opacity: 0, y : 25}}
           whileInView={{opacity:1, y : 0}}
           transition={{ duration: 0.7 }}
-          viewport={{ once: true }} onClick={() => setBar(false)}>Experience</motion.li>
+          viewport={{ once: true }} onClick={() => setBar(false)}><Link to="/experience">Experience</Link></motion.li>
            <motion.li
           initial = {{opacity: 0, y : 25}}
           whileInView={{opacity:1, y : 0}}
           transition={{ duration: 0.7 }}
-          viewport={{ once: true }} onClick={() => setBar(false)}>Projects</motion.li>
-           <motion.li
-          initial = {{opacity: 0, y : 25}}
-          whileInView={{opacity:1, y : 0}}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }} onClick={() => setBar(false)}>Skills</motion.li>
+          viewport={{ once: true }} onClick={() => setBar(false)}><a href="/projects">Projects</a></motion.li>
           <motion.li
           initial = {{opacity: 0, y : 25}}
           whileInView={{opacity:1, y : 0}}
           transition={{ duration: 0.7 }}
-          viewport={{ once: true }} onClick={() => setBar(false)}>Contact</motion.li>
+          viewport={{ once: true }} onClick={() => setBar(false)}><a href="/contact">Contact</a></motion.li>
         </ul>
         <button className="login-button">Resume</button>
       </div>

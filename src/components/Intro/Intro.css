@@ -173,7 +173,53 @@
     100% { transform: scale(1.1) translate(2%, 2%); }
 }
 
-/* Removed background-color pulse to keep Threads visible */
-/* .intro-container {
-    animation: pulse 8s infinite ease-in-out;
-} */
+@media (max-width: 1024px) {
+    .intro-text {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+    .intro-subtext {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        letter-spacing: 0.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-text {
+        font-size: clamp(2rem, 6vw, 3rem);
+        letter-spacing: 0.1em;
+    }
+    .intro-subtext {
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+        letter-spacing: 0.15em;
+        margin-top: 15px;
+    }
+    .enter-button {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .intro-content {
+        padding: 0 20px;
+    }
+    .intro-text {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        letter-spacing: 0.05em;
+    }
+    .intro-subtext {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+        letter-spacing: 0.1em;
+        margin-top: 10px;
+    }
+    .enter-button {
+        padding: 10px 24px;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+    .button-container {
+        margin-top: 30px;
+    }
+}

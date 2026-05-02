@@ -12,17 +12,16 @@ import Intro from './components/Intro/Intro'
 import { useState, useEffect } from 'react'
 
 const App = () => {
-  const [showIntro, setShowIntro] = useState(true);
+  const [showIntro, setShowIntro] = useState(() => {
+    return !sessionStorage.getItem('visited');
+  });
 
   // Optional: Only show intro once per browser session
-  // useEffect(() => {
-  //   const visited = sessionStorage.getItem('visited');
-  //   if (visited) {
-  //     setShowIntro(false);
-  //   } else {
-  //     sessionStorage.setItem('visited', 'true');
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (showIntro) {
+      sessionStorage.setItem('visited', 'true');
+    }
+  }, [showIntro]);
 
   const handleIntroFinish = () => {
     setShowIntro(false);
