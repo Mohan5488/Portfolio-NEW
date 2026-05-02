@@ -10,8 +10,8 @@ const experiences = [
           {
             role: "Machine Learning Intern",
             type: "Internship",
-            start: "May 2024",
-            end: "Jul 2024",
+            start: "May 2025",
+            end: "Jul 2025",
             bullets: [
               "Contributed to a computer vision project for COW UNIQUE IDENTIFICATION POC while explicitly improving skills in real-world ML deployment.",
               "Worked on ML workflows and experimented with structured data for practical business use cases.",
@@ -21,7 +21,7 @@ const experiences = [
           {
             role: "Machine Learning (Part-time)",
             type: "Part-time",
-            start: "Jul 2024",
+            start: "Jul 2025",
             end: "Present",
             bullets: [
               "Gaining hands-on experience with cutting-edge AI technologies including Agentic AI, Generative AI, and tool-using agents.",
