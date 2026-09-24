@@ -247,7 +247,6 @@ main.sphere-main {
   display: flex;
   flex-direction: column;
   background: linear-gradient(to bottom, rgba(30,30,30,0.8), transparent);
-  overflow-y: auto;
 }
 
 .project-card-content h2 {

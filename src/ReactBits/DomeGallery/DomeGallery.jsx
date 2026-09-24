@@ -532,45 +532,73 @@ export default function DomeGallery({
         const p = document.createElement('p');
         p.textContent = description;
         
-        const tagsContainer = document.createElement('div');
-        tagsContainer.className = 'tags-container';
-        tags.forEach(tag => {
-            const span = document.createElement('span');
-            span.textContent = tag;
-            tagsContainer.appendChild(span);
-        });
-        
         lowerPart.appendChild(h2);
         lowerPart.appendChild(p);
-        lowerPart.appendChild(tagsContainer);
         
-        const linkStr = parent.dataset.link;
-        if (linkStr) {
+        const buttonsContainer = document.createElement('div');
+        buttonsContainer.className = 'buttons-container';
+        buttonsContainer.style.display = 'flex';
+        buttonsContainer.style.flexWrap = 'wrap';
+        buttonsContainer.style.gap = '10px';
+        buttonsContainer.style.paddingTop = '10px';
+
+        const createLinkButton = (text, href, isInternal) => {
             const anchor = document.createElement('a');
-            anchor.href = linkStr;
+            anchor.href = href;
+            if (!isInternal) anchor.target = "_blank";
             anchor.style.textDecoration = "none";
-            anchor.style.display = "block";
-            anchor.style.marginTop = "auto";
+            anchor.style.flex = "1";
+            anchor.style.display = "flex";
+            anchor.style.minWidth = "120px";
             
-            if (onNavigate) {
+            if (isInternal && onNavigate) {
                 anchor.onclick = (e) => {
                     e.preventDefault();
-                    onNavigate(linkStr);
+                    onNavigate(href);
                 };
             }
             
             const button = document.createElement('button');
-            button.textContent = 'View Case Study';
-            // Reset margin on button since anchor handles it or button inherits
+            button.textContent = text;
+            button.style.width = "100%";
             button.style.marginTop = "0"; 
+            button.style.fontSize = "0.9rem";
+            button.style.padding = "0.8rem";
             
             anchor.appendChild(button);
-            lowerPart.appendChild(anchor);
-        } else {
+            return anchor;
+        };
+
+        const linkStr = parent.dataset.link;
+        const codeLinkStr = parent.dataset.codeLink;
+        const siteLinkStr = parent.dataset.siteLink;
+
+        let hasButtons = false;
+
+        if (linkStr && linkStr !== 'undefined') {
+            buttonsContainer.appendChild(createLinkButton('Case Study', linkStr, true));
+            hasButtons = true;
+        }
+        
+        if (codeLinkStr && codeLinkStr !== 'undefined') {
+            buttonsContainer.appendChild(createLinkButton('GitHub', codeLinkStr, false));
+            hasButtons = true;
+        }
+
+        if (siteLinkStr && siteLinkStr !== 'undefined') {
+            buttonsContainer.appendChild(createLinkButton('Live Site', siteLinkStr, false));
+            hasButtons = true;
+        }
+
+        if (!hasButtons) {
             const button = document.createElement('button');
             button.textContent = 'View Case Study';
-            lowerPart.appendChild(button);
+            button.style.fontSize = "0.9rem";
+            button.style.padding = "0.8rem";
+            buttonsContainer.appendChild(button);
         }
+
+        lowerPart.appendChild(buttonsContainer);
         
         content.appendChild(upperPart);
         content.appendChild(lowerPart);
@@ -701,6 +729,8 @@ export default function DomeGallery({
                 data-description={it.description}
                 data-tags={JSON.stringify(it.tags)}
                 data-link={it.link}
+                data-code-link={it.codeLink}
+                data-site-link={it.siteLink}
               >
                 <div
                   className="item__image"

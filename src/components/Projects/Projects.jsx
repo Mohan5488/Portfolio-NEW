@@ -69,7 +69,7 @@ const projects = [
 const Projects = () => {
   return (
     <div className='projects-container'>
-        <DomeGallery images={projects} openedImageWidth="400px" openedImageHeight="auto" />
+        <DomeGallery images={projects} openedImageWidth="550px" openedImageHeight="auto" />
     </div>
   )
 }
